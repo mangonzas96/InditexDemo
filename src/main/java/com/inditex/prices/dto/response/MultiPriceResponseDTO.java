@@ -1,4 +1,4 @@
-package com.inditex.prices.dto;
+package com.inditex.prices.dto.response;
 
 import java.util.Date;
 
@@ -7,11 +7,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class PriceDTO {
+public class MultiPriceResponseDTO {
 
-	@JsonProperty("price_id")
-	private Integer priceId;
-	
 	@JsonProperty("brand_id")
     private int brandId;
     
@@ -31,6 +28,6 @@ public class PriceDTO {
     private String currency;
 
 	@JsonProperty("priority")
-	private Integer priority;
+	private Integer priority;    
 
 }

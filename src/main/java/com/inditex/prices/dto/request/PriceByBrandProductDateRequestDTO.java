@@ -5,11 +5,9 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import lombok.Getter;
 
 @Data
-@Getter
-public class PriceByDateBrandProductRequestDTO {
+public class PriceByBrandProductDateRequestDTO {
 
 	@JsonProperty("brand_id")
     private int brandId;

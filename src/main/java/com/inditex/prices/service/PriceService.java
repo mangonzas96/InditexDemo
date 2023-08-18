@@ -1,13 +1,14 @@
 package com.inditex.prices.service;
 
-import java.util.List;
+import java.util.Collection;
 
-import com.inditex.prices.dto.request.PriceByDateBrandProductRequestDTO;
+import com.inditex.prices.dto.request.PriceByBrandProductDateRequestDTO;
 import com.inditex.prices.entity.Price;
 
 public interface PriceService {
-
-	Price getPriceById(Integer id);
 	
-	List<Price> getByDateAndBrandAndProduct(PriceByDateBrandProductRequestDTO priceByDateBrandProductRequestDto);
+	Price getPrice(PriceByBrandProductDateRequestDTO priceRequestDto);
+	
+	Collection<Price> getMultiPrice(PriceByBrandProductDateRequestDTO priceRequestDto);
+
 }
