@@ -17,17 +17,12 @@ public class PriceServiceImpl implements PriceService {
 
 	@Autowired
     private PriceRepository priceRepository;
-
+	
 	@Override
 	public Price getPrice(PriceByBrandProductDateRequestDTO priceRequestDto) {
 		return findPricesByBrandProductDate(priceRequestDto).stream().
 				max(Comparator.comparing(Price::getPriority)).
 				orElseThrow(NoSuchElementException::new);
-	}
-	
-	@Override
-	public Collection<Price> getMultiPrice(PriceByBrandProductDateRequestDTO priceRequestDto) {
-		return findPricesByBrandProductDate(priceRequestDto);
 	}
 	
 	private Collection<Price> findPricesByBrandProductDate(PriceByBrandProductDateRequestDTO priceRequestDto) {

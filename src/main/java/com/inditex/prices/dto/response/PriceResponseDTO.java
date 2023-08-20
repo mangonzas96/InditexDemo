@@ -9,11 +9,11 @@ import lombok.Data;
 @Data
 public class PriceResponseDTO {
 	
-	@JsonProperty("brand_id")
-    private int brandId;
+	@JsonProperty("brand")
+    private BrandResponseDTO brand;
     
-	@JsonProperty("product_id")
-    private int productId;
+	@JsonProperty("product")
+    private ProductResponseDTO product;
     
 	@JsonProperty("start_date")
     private Date startDate;
@@ -22,7 +22,7 @@ public class PriceResponseDTO {
     private Date endDate;
     
 	@JsonProperty("price")
-    private Double price;
+    private Double cost;
     
 	@JsonProperty("currency")
     private String currency;

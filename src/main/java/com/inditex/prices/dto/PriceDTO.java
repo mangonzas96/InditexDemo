@@ -11,12 +11,9 @@ public class PriceDTO {
 
 	@JsonProperty("price_id")
 	private Integer priceId;
-	
-	@JsonProperty("brand_id")
-    private int brandId;
     
-	@JsonProperty("product_id")
-    private int productId;
+	@JsonProperty("product")
+    private ProductDTO product;
     
 	@JsonProperty("start_date")
     private Date startDate;
@@ -25,7 +22,7 @@ public class PriceDTO {
     private Date endDate;
     
 	@JsonProperty("price")
-    private Double price;
+    private Double cost;
     
 	@JsonProperty("currency")
     private String currency;
